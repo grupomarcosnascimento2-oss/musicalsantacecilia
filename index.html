@@ -170,19 +170,60 @@
   <section class="py-20 section-gradient">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12 gold">O que os noivos dizem</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-neutral-800 p-8 rounded-2xl border gold-border">
-          <p class="italic text-gray-300 mb-6">"A Santa Cecília tornou nosso casamento mágico. A voz da cantora na hora da cerimônia nos fez chorar. Simplesmente perfeito!"</p>
-          <p class="font-semibold gold">— Ana & João</p>
+
+      <!-- Carrossel de depoimentos em texto -->
+      <div class="relative mb-10">
+        <button onclick="document.getElementById('depoimentos-texto-carrossel').scrollBy({left:-340,behavior:'smooth'})"
+                class="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full gold-bg text-black shadow-lg hover:scale-110 transition-transform">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div id="depoimentos-texto-carrossel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4" style="scrollbar-width:none;-ms-overflow-style:none;">
+          <div class="snap-center shrink-0 w-80 bg-neutral-800 p-8 rounded-2xl border gold-border">
+            <p class="italic text-gray-300 mb-6">"A Santa Cecília tornou nosso casamento mágico. A voz da cantora na hora da cerimônia nos fez chorar. Simplesmente perfeito!"</p>
+            <p class="font-semibold gold">— Ana & João</p>
+          </div>
+          <div class="snap-center shrink-0 w-80 bg-neutral-800 p-8 rounded-2xl border gold-border">
+            <p class="italic text-gray-300 mb-6">"Profissionais incríveis! Escolhemos 4 vozes e violino. Foi emocionante do início ao fim. Recomendamos de olhos fechados."</p>
+            <p class="font-semibold gold">— Mariana & Pedro</p>
+          </div>
+          <div class="snap-center shrink-0 w-80 bg-neutral-800 p-8 rounded-2xl border gold-border">
+            <p class="italic text-gray-300 mb-6">"Eles entenderam exatamente o que queríamos. A música foi o ponto alto da nossa celebração. Obrigado por fazer parte do nosso dia!"</p>
+            <p class="font-semibold gold">— Letícia & Rafael</p>
+          </div>
         </div>
-        <div class="bg-neutral-800 p-8 rounded-2xl border gold-border">
-          <p class="italic text-gray-300 mb-6">"Profissionais incríveis! Escolhemos 4 vozes e violino. Foi emocionante do início ao fim. Recomendamos de olhos fechados."</p>
-          <p class="font-semibold gold">— Mariana & Pedro</p>
+
+        <button onclick="document.getElementById('depoimentos-texto-carrossel').scrollBy({left:340,behavior:'smooth'})"
+                class="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full gold-bg text-black shadow-lg hover:scale-110 transition-transform">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Carrossel de depoimentos em áudio -->
+      <div class="relative">
+        <button onclick="document.getElementById('depoimentos-audio-carrossel').scrollBy({left:-340,behavior:'smooth'})"
+                class="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full gold-bg text-black shadow-lg hover:scale-110 transition-transform">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div id="depoimentos-audio-carrossel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4" style="scrollbar-width:none;-ms-overflow-style:none;">
+          <!-- Quando tiver o audio, troque o conteudo interno por: <audio controls class="w-full"><source src="seu-audio.mp3" type="audio/mpeg"></audio> e o nome do casal embaixo -->
+          <div class="snap-center shrink-0 w-80 bg-neutral-800 p-8 rounded-2xl border gold-border flex flex-col items-center justify-center gap-3 min-h-[140px]">
+            <audio controls class="w-full">
+              <source src="depoimento-audio-1.ogg" type="audio/ogg">
+            </audio>
+            <p class="font-semibold gold text-center">Cledilândia & Gilberto</p>
+            <p class="text-gray-400 text-sm text-center">Rancho Bella • 20/06/2026</p>
+          </div>
+          <div class="snap-center shrink-0 w-80 bg-neutral-800 p-8 rounded-2xl border gold-border flex flex-col items-center justify-center gap-3 min-h-[140px]">
+            <i class="fas fa-microphone-alt text-3xl text-neutral-600"></i>
+          </div>
         </div>
-        <div class="bg-neutral-800 p-8 rounded-2xl border gold-border">
-          <p class="italic text-gray-300 mb-6">"Eles entenderam exatamente o que queríamos. A música foi o ponto alto da nossa celebração. Obrigado por fazer parte do nosso dia!"</p>
-          <p class="font-semibold gold">— Letícia & Rafael</p>
-        </div>
+
+        <button onclick="document.getElementById('depoimentos-audio-carrossel').scrollBy({left:340,behavior:'smooth'})"
+                class="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full gold-bg text-black shadow-lg hover:scale-110 transition-transform">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </section>
