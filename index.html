@@ -88,35 +88,77 @@
     </div>
   </section>
 
-  <!-- Galeria -->
+  <!-- Galeria de Fotos -->
   <section class="py-20 bg-neutral-950">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-4 gold">Momentos que já embalamos</h2>
-      <p class="text-center text-gray-400 mb-12 text-lg">Fotos e vídeos de casamentos reais que tivemos a honra de musicar</p>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <!-- Substitua cada bloco abaixo pela sua própria foto: troque a div por <img src="sua-foto.jpg" class="w-full h-64 object-cover rounded-xl gold-border border"> -->
-        <div class="relative h-64 rounded-xl overflow-hidden border gold-border">
-          <img src="gallery-1.jpg" alt="Musical Santa Cecília tocando em casamento" class="w-full h-full object-cover">
+      <h2 class="text-4xl font-bold text-center mb-4 gold">Fotos de quem já embalamos</h2>
+      <p class="text-center text-gray-400 mb-12 text-lg">Momentos reais de casamentos que tivemos a honra de musicar</p>
+
+      <div class="relative">
+        <button onclick="document.getElementById('fotos-carrossel').scrollBy({left:-300,behavior:'smooth'})"
+                class="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full gold-bg text-black shadow-lg hover:scale-110 transition-transform">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div id="fotos-carrossel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4" style="scrollbar-width:none;-ms-overflow-style:none;">
+          <!-- Substitua cada bloco abaixo pela sua própria foto: troque a div por <img src="sua-foto.jpg" class="w-full h-full object-cover"> -->
+          <div class="snap-center shrink-0 w-72 h-64 rounded-xl overflow-hidden border gold-border">
+            <img src="gallery-1.jpg" alt="Musical Santa Cecília tocando em casamento" class="w-full h-full object-cover" loading="eager">
+          </div>
+          <div class="snap-center shrink-0 w-72 h-64 rounded-xl overflow-hidden border gold-border">
+            <img src="gallery-2.jpg" alt="Musical Santa Cecília no altar da igreja" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="snap-center shrink-0 w-72 h-64 rounded-xl overflow-hidden border gold-border bg-neutral-800 flex items-center justify-center group">
+            <i class="fas fa-image text-4xl text-neutral-600 group-hover:gold transition-colors"></i>
+          </div>
+          <div class="snap-center shrink-0 w-72 h-64 rounded-xl overflow-hidden border gold-border bg-neutral-800 flex items-center justify-center group">
+            <i class="fas fa-image text-4xl text-neutral-600 group-hover:gold transition-colors"></i>
+          </div>
         </div>
-        <div class="relative h-64 rounded-xl overflow-hidden border gold-border">
-          <img src="gallery-2.jpg" alt="Musical Santa Cecília no altar da igreja" class="w-full h-full object-cover">
-        </div>
-        <div class="relative h-64 rounded-xl overflow-hidden border gold-border bg-neutral-800 flex items-center justify-center group">
-          <i class="fas fa-play-circle text-4xl text-neutral-600 group-hover:gold transition-colors"></i>
-        </div>
-        <div class="relative h-64 rounded-xl overflow-hidden border gold-border bg-neutral-800 flex items-center justify-center group">
-          <i class="fas fa-image text-4xl text-neutral-600 group-hover:gold transition-colors"></i>
-        </div>
-        <div class="relative h-64 rounded-xl overflow-hidden border gold-border bg-neutral-800 flex items-center justify-center group">
-          <i class="fas fa-image text-4xl text-neutral-600 group-hover:gold transition-colors"></i>
-        </div>
-        <div class="relative h-64 rounded-xl overflow-hidden border gold-border bg-neutral-800 flex items-center justify-center group">
-          <i class="fas fa-play-circle text-4xl text-neutral-600 group-hover:gold transition-colors"></i>
-        </div>
+
+        <button onclick="document.getElementById('fotos-carrossel').scrollBy({left:300,behavior:'smooth'})"
+                class="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full gold-bg text-black shadow-lg hover:scale-110 transition-transform">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
-      <p class="text-center text-gray-500 text-sm mt-6">📸 Envie suas fotos e vídeos de casamentos para substituir esses espaços de exemplo</p>
+      <p class="text-center text-gray-500 text-sm mt-6">📸 Envie mais fotos para completar os espaços restantes</p>
     </div>
   </section>
+
+  <!-- Galeria de Vídeos -->
+  <section class="py-20 section-gradient">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4 gold">Vídeos de quem já embalamos</h2>
+      <p class="text-center text-gray-400 mb-12 text-lg">Veja e ouça um pouco do que preparamos para cada casamento</p>
+
+      <div class="relative">
+        <button onclick="document.getElementById('videos-carrossel').scrollBy({left:-340,behavior:'smooth'})"
+                class="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full gold-bg text-black shadow-lg hover:scale-110 transition-transform">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div id="videos-carrossel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4" style="scrollbar-width:none;-ms-overflow-style:none;">
+          <!-- Quando tiver o link do YouTube, troque a div por um iframe: <iframe class="w-full h-full" src="https://www.youtube.com/embed/SEU_VIDEO_ID" title="Video" frameborder="0" allowfullscreen></iframe> -->
+          <div class="snap-center shrink-0 w-80 h-72 rounded-xl overflow-hidden border gold-border bg-neutral-800 flex items-center justify-center group">
+            <i class="fas fa-play-circle text-5xl text-neutral-600 group-hover:gold transition-colors"></i>
+          </div>
+          <div class="snap-center shrink-0 w-80 h-72 rounded-xl overflow-hidden border gold-border bg-neutral-800 flex items-center justify-center group">
+            <i class="fas fa-play-circle text-5xl text-neutral-600 group-hover:gold transition-colors"></i>
+          </div>
+        </div>
+
+        <button onclick="document.getElementById('videos-carrossel').scrollBy({left:340,behavior:'smooth'})"
+                class="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 items-center justify-center w-11 h-11 rounded-full gold-bg text-black shadow-lg hover:scale-110 transition-transform">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-6">🎥 Envie os links do YouTube para incorporar os vídeos aqui</p>
+    </div>
+  </section>
+
+  <style>
+    #fotos-carrossel::-webkit-scrollbar, #videos-carrossel::-webkit-scrollbar { display: none; }
+  </style>
 
   <!-- Depoimentos -->
   <section class="py-20 section-gradient">
